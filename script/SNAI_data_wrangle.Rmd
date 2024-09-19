@@ -1,0 +1,200 @@
+---
+title: "SNAI_Summative: data wrangling"
+author: ""
+date: "2024-04-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ineq)
+library(dplyr)
+library(stringr)
+library(igraph)
+library(lmtest)
+library(readr)
+library(plm)
+library(tidyverse)
+library(stargazer)
+library(lmtest)
+# Set the working directory
+setwd("/Users/tombombo/Library/Mobile Documents/com~apple~CloudDocs/Oxford SNAI")
+```
+
+## Load and prepare data
+```{r clean data}
+# Reading the data
+data <- read_csv("input/data.csv")
+data %>% select(category_main) %>% unique()
+
+data <- data %>% slice(-c(which(is.na(data$category_main)),
+                 which(is.na(data$year)),
+                 which(is.na(data$project_skills))))
+data <- data %>% mutate(date_published = ymd_hms(date_published)) %>% 
+  mutate("year" = year(date_published))
+
+projects <- data %>% select(project_ID) %>% unique()
+skills <- strsplit(data$project_skills, " ") %>%
+  unlist() %>% as.data.frame() %>% 
+  na.omit() %>% 
+  unique() %>% rename("skill" = ".")
+
+# locate geographical area for worker
+data <- data %>% mutate("geographical_area_worker" = ifelse(worker_country %in% c("United States", "Canada", "Mexico"), "North America", 
+                                                     ifelse(worker_country %in% c("United Kingdom", "Germany", "France", "Netherlands", "Sweden", "Switzerland", "Norway", "Denmark", "Finland", "Belgium", "Austria", "Ireland"), "Europe", 
+                                                            ifelse(worker_country %in% c("Australia", "New Zealand", "Singapore", "Hong Kong", "Japan"), "Asia Pacific", "Other"))))
+# locate geographical area for employer
+data <- data %>% mutate("geographical_area_employer" = ifelse(employer_country %in% c("United States", "Canada", "Mexico"), "North America", 
+                                                     ifelse(employer_country %in% c("United Kingdom", "Germany", "France", "Netherlands", "Sweden", "Switzerland", "Norway", "Denmark", "Finland", "Belgium", "Austria", "Ireland"), "Europe", 
+                                                            ifelse(employer_country %in% c("Australia", "New Zealand", "Singapore", "Hong Kong", "Japan"), "Asia Pacific", "Other"))))
+
+
+# in data, add a column counting the number of projects a worker has worked on until that date
+data <- data %>% arrange(worker_ID, date_published) %>%
+  group_by(worker_ID) %>% mutate(worker_experience = row_number()) %>% ungroup()
+
+write_csv(data, "output/data.csv")
+write_csv(projects, "output/projects.csv")
+write_csv(skills, "output/skills.csv")
+```
+## Compute regression statistics
+
+### Supply and Demand of Skills
+```{r supply demand stats}
+data <- read_csv("output/data.csv")
+supply_demands <- skills
+i <- 1
+supply_demands$supply <- rep(0, nrow(supply_demands))
+supply_demands$demand <- rep(0, nrow(supply_demands))
+while(i<=nrow(supply_demands)){
+  skill <- supply_demands$skill[i]
+  supply_demands$supply[i] <- sum(str_detect(data$worker_skills, pattern = skill), na.rm = TRUE)
+  supply_demands$demand[i] <- sum(str_detect(data$project_skills, pattern = skill), na.rm = TRUE)
+  i <- i + 1
+  print(paste0("skill ", i, " done"))
+}
+supply_demand <- supply_demands %>% select(skill, supply, demand)
+write_csv(supply_demand, "output/supply_demand.csv")
+```
+
+### Skill Premia
+```{r compute premiums}
+skill_premiums <- data.frame(skill = character(), skill_premium = numeric())
+i <- 1
+while(i <= nrow(skills)){
+  skill <- skills %>% slice(i) %>% pull()
+  data$skill_indicator <- ifelse(str_detect(data$project_skills, skill), 1, 0)
+  model <- lm(log(hourly_rate) ~ skill_indicator + 
+                worker_experience + employer_country + worker_country + category_main +
+                factor(year), data)
+  results <- summary(model)
+  # results <- as.data.frame(coeftest(model, vcov. = vcovHC(model, cluster = "group", type = "HC1"))[,])
+  tmp <- data.frame("skill" = skill, "skill_premium" = results$coefficients[2,1])
+  skill_premiums <- rbind(skill_premiums, tmp)
+  print(paste0("skill ", i, " done"))
+  i <- i + 1
+}
+write_csv(skill_premiums, "output/skill_premiums_countryfes.csv")
+rm(tmp)
+```
+
+```{r load alternative skill premia}
+skill_premiums_naive <- read_csv("output/skill_premiums_niavereg.csv") # without any controls
+skill_premiums_controls <- read_csv("output/skill_premiums.csv") # with all controls from orginal articles and no country fixed effects
+skill_premiums_countryfes <- read_csv("output/skill_premiums_countryfes.csv") # with all controls from orginal articles and country fixed effects
+skill_premiums_withworkerfes <- read_csv("output/skill_premiums_withworkerfes.csv") # with all controls from orginal articles and worker fixed effects
+
+# join the different skill premia
+skill_premiums <- left_join(skill_premiums_naive, skill_premiums_countryfes, by = "skill", suffix = c("_niavereg", "_countryfes"))
+skill_premiums <- left_join(skill_premiums, skill_premiums_withworkerfes, by = "skill")
+skill_premiums <- left_join(skill_premiums, skill_premiums_controls, by = "skill", suffix = c("_workerfes", "_controls"))
+```
+
+```{r, save skill_premiums}
+write_csv(skill_premiums, "output/skill_premiums_joined.csv")
+```
+
+## Load Network Data
+
+### Load Edges and Adjacency Matrix with NC backboning
+```{r get skills}
+skills <- read_csv("output/skills.csv")
+skill_premiums <- read_csv("output/skill_premiums_joined.csv")
+```
+
+```{r, get network}
+edges_nc <- read_csv("output/edge_table_nc_thresholded.csv")
+edges_nc <- full_join(edges_nc, skills, by = c("node1" = "skill"))
+G_nc <- graph_from_data_frame(edges_nc %>% select('node1', 'node2'), directed = FALSE)
+adj_mat_nc <- as_adjacency_matrix(G_nc, sparse =FALSE)
+adj_mat_nc <- adj_mat_nc[-which(rownames(adj_mat_nc) == "NA"),-which(colnames(adj_mat_nc) == "NA")]
+```
+
+### Load Edges and Adjacency Matrix with DF backboning
+```{r, get DF network}
+edges_df <- read_csv("output/edge_table_disp_filter_thresholded.csv")
+edges_df <- full_join(edges_df, skills, by = c("node1" = "skill"))
+G_df <- graph_from_data_frame(edges_df %>% select('node1', 'node2'), directed = FALSE)
+adj_mat_df <- as_adjacency_matrix(G_df, sparse =FALSE)
+adj_mat_df <- adj_mat_df[-which(rownames(adj_mat_df) == "NA"),-which(colnames(adj_mat_df) == "NA")]
+```
+
+### Compute network metrics for NC and for DF
+
+```{r for NC, add degree, ANNV, Gini, and bridge_centrality to skills_premium}
+# Number of adjacent skills and Value of adjacent skills
+network_metrics <- data.frame("skill" = rownames(adj_mat_nc), 
+                        "degree_nc" = (rowSums(adj_mat_nc) %>% as.vector()),
+                        "annvalue_nc" = adj_mat_nc %*% skill_premiums$skill_premium_countryfes)
+skill_premiums <- left_join(skill_premiums, network_metrics, by = "skill")
+
+# Gini coefficient
+sum_degree_neighbours <- adj_mat_nc %*% rowSums(adj_mat_nc) %>% as.vector()
+tmp <- matrix(sum_degree_neighbours, nrow = nrow(adj_mat_nc),
+              ncol = length(sum_degree_neighbours), byrow = TRUE)
+tmp <- t(tmp)
+frequency_distributions_nc <- adj_mat_nc / tmp
+frequency_distributions_nc[which(is.na(frequency_distributions_nc))] <- 0
+gini_nc <- data.frame("gini_nc" = as.vector(apply(frequency_distributions_nc, 1, ineq::Gini)),
+                      "skill" = rownames(adj_mat_nc))
+skill_premiums <- left_join(skill_premiums, gini_nc, by = "skill")
+
+# get bridge centrality
+nodes <- V(G_nc) %>% as.data.frame() %>% rownames()
+bridge_centrality_nc <- data.frame("skill" = nodes, "bridge_centrality_nc" = betweenness(G_nc, directed = FALSE, normalized = TRUE))
+skill_premiums <- skill_premiums %>% left_join(bridge_centrality_nc, by = "skill")
+```
+
+```{r for DF, add degree, ANNV, Gini, and bridge_centrality to skills_premium}
+# Number of adjacent skills and Value of adjacent skills
+network_metrics <- data.frame("skill" = rownames(adj_mat_df), 
+                        "degree_df" = (rowSums(adj_mat_df) %>% as.vector()),
+                        "annvalue_df" = adj_mat_df %*% skill_premiums$skill_premium_countryfes)
+skill_premiums <- left_join(skill_premiums, network_metrics, by = "skill")
+
+# Gini coefficient
+sum_degree_neighbours <- adj_mat_df %*% rowSums(adj_mat_df) %>% as.vector()
+tmp <- matrix(sum_degree_neighbours, nrow = nrow(adj_mat_df),
+              ncol = length(sum_degree_neighbours), byrow = TRUE)
+tmp <- t(tmp)
+frequency_distributions_df <- adj_mat_df / tmp
+frequency_distributions_df[which(is.na(frequency_distributions_df))] <- 0
+gini_df <- data.frame("gini_df" = as.vector(apply(frequency_distributions_df, 1, ineq::Gini)),
+                      "skill" = rownames(adj_mat_df))
+skill_premiums <- left_join(skill_premiums, gini_df, by = "skill")
+
+# get bridge centrality
+nodes <- V(G_df) %>% as.data.frame() %>% rownames()
+bridge_centrality_df <- data.frame("skill" = nodes, "bridge_centrality_df" = betweenness(G_df, directed = FALSE, normalized = TRUE))
+skill_premiums <- skill_premiums %>% left_join(bridge_centrality_df, by = "skill")
+```
+
+```{r add supply and demand}
+skill_premiums <- skill_premiums %>% left_join(supply_demand, by = "skill")
+```
+
+```{r, save skill_premiums}
+write_csv(skill_premiums, "output/skill_premiums_data.csv")
+```
+
+

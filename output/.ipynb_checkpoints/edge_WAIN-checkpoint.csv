@@ -1,0 +1,835 @@
+,node1,node2,year,count
+0,Albania,Canada,2020,1
+1,Albania,Ukraine,2020,1
+2,Algeria,United States,2016,2
+3,Andorra,United States,2020,1
+4,Argentina,Brazil,2018,1
+5,Argentina,Canada,2017,1
+6,Argentina,Canada,2018,1
+7,Argentina,France,2020,1
+8,Argentina,Spain,2020,1
+9,Argentina,Switzerland,2018,1
+10,Argentina,United Kingdom,2017,1
+11,Argentina,United States,2016,2
+12,Argentina,United States,2018,1
+13,Argentina,United States,2020,4
+14,Armenia,Australia,2016,1
+15,Armenia,Australia,2017,1
+16,Armenia,Australia,2020,1
+17,Armenia,Canada,2018,3
+18,Armenia,Estonia,2019,1
+19,Armenia,France,2018,1
+20,Armenia,Germany,2016,1
+21,Armenia,India,2020,2
+22,Armenia,Japan,2020,1
+23,Armenia,Jordan,2020,1
+24,Armenia,Netherlands,2018,1
+25,Armenia,Saudi Arabia,2016,1
+26,Armenia,Sweden,2017,1
+27,Armenia,United Kingdom,2019,1
+28,Armenia,United Kingdom,2020,3
+29,Armenia,United States,2016,1
+30,Armenia,United States,2017,1
+31,Armenia,United States,2018,2
+32,Armenia,United States,2019,4
+33,Armenia,United States,2020,2
+34,Australia,Australia,2016,1
+35,Australia,Australia,2020,3
+36,Australia,Canada,2016,1
+37,Australia,France,2020,1
+38,Australia,United Kingdom,2018,1
+39,Australia,United States,2016,3
+40,Australia,United States,2018,1
+41,Australia,United States,2020,2
+42,Austria,Belgium,2018,1
+43,Austria,United States,2016,1
+44,Bangladesh,Australia,2020,1
+45,Bangladesh,Brazil,2017,1
+46,Bangladesh,Canada,2016,1
+47,Bangladesh,Canada,2017,1
+48,Bangladesh,Canada,2020,3
+49,Bangladesh,Germany,2017,1
+50,Bangladesh,India,2017,1
+51,Bangladesh,Israel,2020,1
+52,Bangladesh,Italy,2016,1
+53,Bangladesh,Italy,2020,1
+54,Bangladesh,Japan,2020,1
+55,Bangladesh,South Africa,2020,1
+56,Bangladesh,Ukraine,2016,1
+57,Bangladesh,United Kingdom,2017,2
+58,Bangladesh,United Kingdom,2020,1
+59,Bangladesh,United States,2016,4
+60,Bangladesh,United States,2017,3
+61,Bangladesh,United States,2018,7
+62,Bangladesh,United States,2019,5
+63,Bangladesh,United States,2020,11
+64,Belarus,Netherlands,2020,1
+65,Belarus,Portugal,2019,1
+66,Belarus,United Kingdom,2020,1
+67,Belarus,United States,2017,1
+68,Belarus,United States,2018,2
+69,Belarus,United States,2019,1
+70,Bolivia,Norway,2016,1
+71,Bolivia,United States,2017,1
+72,Bosnia and Herzegovina,India,2020,1
+73,Bosnia and Herzegovina,United States,2018,1
+74,Bosnia and Herzegovina,United States,2020,2
+75,Brazil,Australia,2019,1
+76,Brazil,France,2016,1
+77,Brazil,Ukraine,2019,1
+78,Brazil,United Kingdom,2019,1
+79,Brazil,United States,2016,2
+80,Brazil,United States,2017,1
+81,Brazil,United States,2019,1
+82,Brazil,United States,2020,3
+83,Bulgaria,Australia,2016,1
+84,Bulgaria,Belgium,2016,1
+85,Bulgaria,Canada,2020,1
+86,Bulgaria,India,2018,1
+87,Bulgaria,Sweden,2017,1
+88,Bulgaria,Turkey,2020,1
+89,Bulgaria,United States,2017,1
+90,Bulgaria,United States,2019,2
+91,Bulgaria,United States,2020,4
+92,Cameroon,United States,2020,1
+93,Canada,Australia,2017,1
+94,Canada,Australia,2018,1
+95,Canada,Australia,2020,2
+96,Canada,Canada,2017,2
+97,Canada,Canada,2019,1
+98,Canada,Canada,2020,3
+99,Canada,Netherlands,2020,1
+100,Canada,South Africa,2019,1
+101,Canada,Spain,2019,1
+102,Canada,Sweden,2016,1
+103,Canada,United Kingdom,2018,1
+104,Canada,United States,2016,1
+105,Canada,United States,2017,4
+106,Canada,United States,2018,4
+107,Canada,United States,2019,4
+108,Canada,United States,2020,5
+109,Chile,United Kingdom,2019,1
+110,Chile,United Kingdom,2020,1
+111,China,France,2017,1
+112,China,New Zealand,2020,1
+113,China,Sweden,2016,1
+114,China,United Kingdom,2018,1
+115,China,United States,2017,1
+116,China,United States,2018,1
+117,China,United States,2020,1
+118,Colombia,United States,2016,1
+119,Colombia,United States,2018,2
+120,Colombia,United States,2020,2
+121,Costa Rica,Brazil,2020,1
+122,Croatia,Denmark,2020,1
+123,Croatia,Israel,2016,1
+124,Croatia,Ukraine,2016,1
+125,Croatia,United States,2019,1
+126,Croatia,United States,2020,1
+127,Cyprus,Belarus,2020,1
+128,Cyprus,Germany,2019,1
+129,Cyprus,United States,2018,1
+130,Czech Republic,Russia,2017,1
+131,Czech Republic,United States,2016,1
+132,Czech Republic,United States,2018,2
+133,Czech Republic,United States,2019,1
+134,Dominican Republic,Australia,2017,1
+135,Dominican Republic,United States,2016,1
+136,Ecuador,United States,2019,1
+137,Egypt,Australia,2019,1
+138,Egypt,Australia,2020,1
+139,Egypt,Canada,2017,1
+140,Egypt,Canada,2018,1
+141,Egypt,Canada,2020,1
+142,Egypt,China,2018,2
+143,Egypt,Germany,2019,1
+144,Egypt,Germany,2020,1
+145,Egypt,India,2020,1
+146,Egypt,Netherlands,2020,1
+147,Egypt,Norway,2018,1
+148,Egypt,Pakistan,2020,1
+149,Egypt,South Africa,2020,1
+150,Egypt,Taiwan,2020,1
+151,Egypt,United Kingdom,2018,2
+152,Egypt,United States,2016,2
+153,Egypt,United States,2017,3
+154,Egypt,United States,2018,8
+155,Egypt,United States,2019,4
+156,Egypt,United States,2020,12
+157,Estonia,Switzerland,2020,1
+158,Ethiopia,United States,2019,1
+159,France,Denmark,2020,1
+160,France,Hong Kong,2016,1
+161,France,United Kingdom,2020,1
+162,France,United States,2020,1
+163,Georgia,Australia,2020,1
+164,Georgia,Canada,2017,1
+165,Georgia,France,2017,1
+166,Georgia,Germany,2020,1
+167,Georgia,Guatemala,2019,1
+168,Georgia,India,2020,1
+169,Georgia,New Zealand,2017,1
+170,Georgia,Switzerland,2018,1
+171,Georgia,Switzerland,2019,1
+172,Georgia,United Kingdom,2017,1
+173,Georgia,United States,2016,1
+174,Georgia,United States,2017,2
+175,Germany,Australia,2017,1
+176,Germany,Estonia,2016,1
+177,Germany,Germany,2018,1
+178,Germany,Germany,2019,1
+179,Germany,Germany,2020,1
+180,Germany,Puerto Rico,2019,1
+181,Germany,Sweden,2017,1
+182,Germany,Switzerland,2018,1
+183,Germany,Thailand,2020,1
+184,Germany,United Kingdom,2020,1
+185,Germany,United States,2016,3
+186,Germany,United States,2020,3
+187,Ghana,United States,2016,1
+188,Gibraltar,Chile,2020,1
+189,Greece,Belgium,2020,1
+190,Greece,India,2020,1
+191,Greece,Puerto Rico,2020,1
+192,Greece,United States,2017,1
+193,Hong Kong,Germany,2020,1
+194,Hong Kong,Israel,2019,1
+195,Hong Kong,United Kingdom,2017,1
+196,Hong Kong,United States,2017,1
+197,Hong Kong,United States,2019,1
+198,Hungary,Canada,2020,2
+199,Hungary,India,2020,1
+200,Hungary,Turkey,2020,1
+201,Hungary,United Kingdom,2017,1
+202,Hungary,United Kingdom,2018,1
+203,Hungary,United States,2017,1
+204,Hungary,United States,2019,1
+205,Hungary,United States,2020,1
+206,India,Albania,2020,1
+207,India,Algeria,2019,1
+208,India,Armenia,2020,1
+209,India,Australia,2016,1
+210,India,Australia,2017,4
+211,India,Australia,2018,2
+212,India,Australia,2019,5
+213,India,Australia,2020,16
+214,India,Austria,2016,1
+215,India,Austria,2018,1
+216,India,Austria,2020,1
+217,India,Belgium,2018,1
+218,India,Brazil,2018,4
+219,India,Canada,2016,4
+220,India,Canada,2017,4
+221,India,Canada,2018,5
+222,India,Canada,2019,10
+223,India,Canada,2020,13
+224,India,China,2020,1
+225,India,Costa Rica,2016,1
+226,India,Czech Republic,2018,1
+227,India,Denmark,2017,1
+228,India,Denmark,2019,2
+229,India,Denmark,2020,2
+230,India,Estonia,2018,1
+231,India,Finland,2018,1
+232,India,Finland,2020,1
+233,India,France,2019,1
+234,India,France,2020,2
+235,India,French Polynesia,2018,1
+236,India,Germany,2016,2
+237,India,Germany,2018,2
+238,India,Germany,2019,1
+239,India,Germany,2020,3
+240,India,Hong Kong,2017,1
+241,India,Hong Kong,2019,1
+242,India,Hong Kong,2020,2
+243,India,Hungary,2019,1
+244,India,India,2016,3
+245,India,India,2017,4
+246,India,India,2018,8
+247,India,India,2019,8
+248,India,India,2020,17
+249,India,Ireland,2016,1
+250,India,Ireland,2017,1
+251,India,Ireland,2020,2
+252,India,Israel,2017,1
+253,India,Israel,2018,1
+254,India,Israel,2019,1
+255,India,Israel,2020,6
+256,India,Italy,2017,1
+257,India,Italy,2020,1
+258,India,Japan,2018,1
+259,India,Japan,2020,2
+260,India,Kuwait,2020,1
+261,India,Kyrgyzstan,2018,1
+262,India,Lithuania,2018,1
+263,India,Macedonia,2019,1
+264,India,Malaysia,2020,1
+265,India,Mexico,2017,1
+266,India,Mexico,2019,2
+267,India,Mexico,2020,1
+268,India,Morocco,2020,1
+269,India,Netherlands,2020,1
+270,India,New Zealand,2016,2
+271,India,New Zealand,2019,1
+272,India,Norway,2017,1
+273,India,Norway,2018,1
+274,India,Norway,2019,1
+275,India,Norway,2020,1
+276,India,Oman,2020,1
+277,India,Panama,2020,1
+278,India,Peru,2020,1
+279,India,Poland,2020,1
+280,India,Portugal,2020,3
+281,India,Russia,2018,2
+282,India,Russia,2019,1
+283,India,Russia,2020,1
+284,India,Saudi Arabia,2016,1
+285,India,Saudi Arabia,2017,1
+286,India,Saudi Arabia,2020,1
+287,India,Serbia,2019,1
+288,India,Singapore,2019,2
+289,India,Singapore,2020,1
+290,India,Slovenia,2018,1
+291,India,South Africa,2016,1
+292,India,South Africa,2017,1
+293,India,South Africa,2020,2
+294,India,South Korea,2019,2
+295,India,South Korea,2020,2
+296,India,Spain,2019,4
+297,India,Spain,2020,1
+298,India,Sweden,2017,2
+299,India,Switzerland,2019,2
+300,India,Thailand,2018,1
+301,India,Turkey,2018,1
+302,India,Turkey,2019,1
+303,India,Turkey,2020,1
+304,India,Uganda,2020,1
+305,India,Ukraine,2018,1
+306,India,United Arab Emirates,2018,1
+307,India,United Arab Emirates,2020,2
+308,India,United Kingdom,2016,3
+309,India,United Kingdom,2017,1
+310,India,United Kingdom,2018,3
+311,India,United Kingdom,2019,6
+312,India,United Kingdom,2020,8
+313,India,United States,2016,21
+314,India,United States,2017,46
+315,India,United States,2018,41
+316,India,United States,2019,68
+317,India,United States,2020,85
+318,India,Vietnam,2016,1
+319,Indonesia,Australia,2020,1
+320,Indonesia,Canada,2020,1
+321,Indonesia,China,2020,1
+322,Indonesia,Germany,2020,1
+323,Indonesia,Haiti,2019,1
+324,Indonesia,Lithuania,2020,1
+325,Indonesia,Russia,2019,1
+326,Indonesia,Saudi Arabia,2020,1
+327,Indonesia,United States,2017,1
+328,Indonesia,United States,2019,1
+329,Indonesia,United States,2020,5
+330,Ireland,Australia,2020,1
+331,Ireland,Ireland,2019,1
+332,Ireland,United Kingdom,2018,1
+333,Israel,Israel,2019,1
+334,Israel,United States,2016,1
+335,Israel,United States,2019,1
+336,Italy,Denmark,2017,1
+337,Italy,France,2020,1
+338,Italy,Germany,2019,1
+339,Italy,Italy,2020,1
+340,Italy,Spain,2016,1
+341,Italy,Switzerland,2019,1
+342,Italy,United Kingdom,2018,1
+343,Italy,United States,2017,1
+344,Italy,United States,2018,2
+345,Italy,United States,2020,2
+346,Kazakhstan,India,2017,1
+347,Kazakhstan,Kuwait,2020,1
+348,Kazakhstan,United States,2017,1
+349,Kenya,New Zealand,2019,1
+350,Kenya,United Kingdom,2016,1
+351,Kenya,United States,2016,1
+352,Kenya,United States,2017,1
+353,Kenya,United States,2018,1
+354,Kenya,United States,2020,3
+355,Kyrgyzstan,United States,2016,1
+356,Latvia,Portugal,2018,1
+357,Latvia,United States,2017,1
+358,Latvia,United States,2020,1
+359,Lebanon,United States,2020,1
+360,Lithuania,Cyprus,2019,1
+361,Lithuania,United States,2018,1
+362,Lithuania,United States,2019,1
+363,Macedonia,Austria,2019,1
+364,Macedonia,Italy,2020,1
+365,Macedonia,United States,2016,1
+366,Macedonia,United States,2017,2
+367,Macedonia,United States,2018,1
+368,Macedonia,United States,2019,2
+369,Malaysia,United Kingdom,2017,1
+370,Malaysia,United Kingdom,2018,1
+371,Mexico,United States,2018,1
+372,Mexico,United States,2019,1
+373,Mexico,United States,2020,2
+374,Moldova,Australia,2019,1
+375,Moldova,Canada,2017,1
+376,Moldova,Canada,2018,1
+377,Moldova,Ukraine,2018,1
+378,Moldova,United States,2017,1
+379,Moldova,United States,2020,1
+380,Mongolia,Puerto Rico,2020,1
+381,Mongolia,United States,2020,1
+382,Montenegro,United States,2016,1
+383,Montenegro,United States,2020,3
+384,Morocco,Canada,2020,1
+385,Morocco,United States,2020,1
+386,Myanmar,United Kingdom,2020,1
+387,Nepal,Canada,2017,1
+388,Nepal,India,2020,1
+389,Nepal,Ireland,2017,1
+390,Nepal,South Africa,2017,1
+391,Nepal,United States,2017,1
+392,Nepal,United States,2018,1
+393,Nepal,United States,2020,1
+394,Netherlands,Australia,2020,1
+395,Netherlands,Barbados,2020,1
+396,Netherlands,Switzerland,2020,1
+397,Netherlands,Turkey,2020,1
+398,Netherlands,United States,2016,1
+399,Netherlands,United States,2018,1
+400,Netherlands,United States,2019,1
+401,Netherlands,United States,2020,2
+402,New Zealand,Hong Kong,2018,1
+403,New Zealand,New Zealand,2018,1
+404,New Zealand,Switzerland,2016,1
+405,New Zealand,United Kingdom,2016,1
+406,New Zealand,United Kingdom,2019,1
+407,New Zealand,United States,2017,1
+408,New Zealand,United States,2018,1
+409,Nigeria,Nigeria,2020,1
+410,Nigeria,Sweden,2019,1
+411,Nigeria,United States,2019,1
+412,Nigeria,United States,2020,4
+413,Norway,Germany,2017,1
+414,Norway,Ireland,2019,1
+415,Norway,United States,2019,1
+416,Pakistan,Australia,2018,1
+417,Pakistan,Australia,2019,1
+418,Pakistan,Australia,2020,2
+419,Pakistan,Belgium,2020,1
+420,Pakistan,Bosnia and Herzegovina,2019,1
+421,Pakistan,Canada,2019,1
+422,Pakistan,Canada,2020,4
+423,Pakistan,Chile,2018,1
+424,Pakistan,Cyprus,2019,1
+425,Pakistan,Denmark,2020,1
+426,Pakistan,Egypt,2019,1
+427,Pakistan,France,2020,2
+428,Pakistan,Germany,2016,1
+429,Pakistan,Germany,2020,2
+430,Pakistan,India,2019,1
+431,Pakistan,Israel,2020,2
+432,Pakistan,Lebanon,2020,1
+433,Pakistan,Malaysia,2017,1
+434,Pakistan,Malaysia,2020,1
+435,Pakistan,Malta,2019,1
+436,Pakistan,Moldova,2020,1
+437,Pakistan,Netherlands,2020,1
+438,Pakistan,Oman,2020,1
+439,Pakistan,Pakistan,2018,2
+440,Pakistan,Pakistan,2019,1
+441,Pakistan,Philippines,2019,1
+442,Pakistan,Puerto Rico,2019,1
+443,Pakistan,Saudi Arabia,2018,1
+444,Pakistan,Singapore,2020,2
+445,Pakistan,Slovakia,2018,1
+446,Pakistan,Switzerland,2018,2
+447,Pakistan,Switzerland,2020,1
+448,Pakistan,Trinidad and Tobago,2020,1
+449,Pakistan,United Arab Emirates,2020,4
+450,Pakistan,United Kingdom,2017,1
+451,Pakistan,United Kingdom,2019,1
+452,Pakistan,United Kingdom,2020,1
+453,Pakistan,United States,2016,5
+454,Pakistan,United States,2017,6
+455,Pakistan,United States,2018,16
+456,Pakistan,United States,2019,24
+457,Pakistan,United States,2020,37
+458,Pakistan,Vietnam,2016,1
+459,Pakistan,Vietnam,2020,1
+460,Palestinian Territories,Canada,2016,1
+461,Palestinian Territories,Israel,2019,1
+462,Palestinian Territories,South Africa,2019,1
+463,Paraguay,Israel,2020,1
+464,Peru,Nicaragua,2017,1
+465,Peru,United States,2019,1
+466,Peru,United States,2020,1
+467,Philippines,Australia,2016,4
+468,Philippines,Australia,2018,1
+469,Philippines,Australia,2019,1
+470,Philippines,Australia,2020,1
+471,Philippines,Canada,2016,1
+472,Philippines,Canada,2020,1
+473,Philippines,France,2019,1
+474,Philippines,France,2020,1
+475,Philippines,Germany,2019,1
+476,Philippines,Israel,2016,1
+477,Philippines,Israel,2020,1
+478,Philippines,Malaysia,2018,1
+479,Philippines,Morocco,2020,1
+480,Philippines,Netherlands,2020,1
+481,Philippines,New Zealand,2019,1
+482,Philippines,Russia,2019,2
+483,Philippines,Russia,2020,1
+484,Philippines,Saudi Arabia,2020,1
+485,Philippines,South Korea,2016,1
+486,Philippines,United Arab Emirates,2019,1
+487,Philippines,United Kingdom,2016,1
+488,Philippines,United Kingdom,2017,1
+489,Philippines,United Kingdom,2020,3
+490,Philippines,United States,2016,5
+491,Philippines,United States,2017,13
+492,Philippines,United States,2018,11
+493,Philippines,United States,2019,10
+494,Philippines,United States,2020,11
+495,Poland,Australia,2020,1
+496,Poland,Canada,2017,1
+497,Poland,Canada,2020,1
+498,Poland,Finland,2019,1
+499,Poland,Germany,2020,1
+500,Poland,Hong Kong,2019,1
+501,Poland,Hong Kong,2020,1
+502,Poland,Latvia,2019,1
+503,Poland,Malta,2018,1
+504,Poland,Norway,2019,1
+505,Poland,Russia,2020,1
+506,Poland,Saudi Arabia,2020,1
+507,Poland,Switzerland,2020,1
+508,Poland,United Kingdom,2019,1
+509,Poland,United Kingdom,2020,2
+510,Poland,United States,2017,4
+511,Poland,United States,2018,3
+512,Poland,United States,2020,3
+513,Portugal,Italy,2020,1
+514,Portugal,Portugal,2020,2
+515,Portugal,Singapore,2020,1
+516,Portugal,United States,2017,1
+517,Portugal,United States,2018,1
+518,Portugal,United States,2020,1
+519,Romania,Australia,2017,1
+520,Romania,France,2017,1
+521,Romania,Israel,2016,1
+522,Romania,Israel,2020,1
+523,Romania,Italy,2020,1
+524,Romania,Poland,2020,1
+525,Romania,Romania,2016,1
+526,Romania,United Arab Emirates,2018,1
+527,Romania,United Kingdom,2017,1
+528,Romania,United States,2017,2
+529,Romania,United States,2018,1
+530,Romania,United States,2019,2
+531,Romania,United States,2020,5
+532,Russia,Australia,2016,2
+533,Russia,Australia,2017,1
+534,Russia,Australia,2020,2
+535,Russia,Canada,2016,1
+536,Russia,Canada,2017,2
+537,Russia,Canada,2019,1
+538,Russia,Canada,2020,3
+539,Russia,Chile,2017,1
+540,Russia,Denmark,2017,1
+541,Russia,Estonia,2019,1
+542,Russia,Estonia,2020,1
+543,Russia,Finland,2020,1
+544,Russia,France,2019,1
+545,Russia,France,2020,1
+546,Russia,Germany,2016,1
+547,Russia,Germany,2017,1
+548,Russia,Germany,2019,1
+549,Russia,Germany,2020,1
+550,Russia,Greece,2016,1
+551,Russia,Hong Kong,2019,1
+552,Russia,Hungary,2020,1
+553,Russia,Iceland,2016,1
+554,Russia,India,2018,1
+555,Russia,Ireland,2016,1
+556,Russia,Israel,2017,1
+557,Russia,Israel,2018,1
+558,Russia,Israel,2019,2
+559,Russia,Jordan,2018,1
+560,Russia,Kazakhstan,2018,1
+561,Russia,Netherlands,2019,1
+562,Russia,Pakistan,2017,1
+563,Russia,Poland,2020,1
+564,Russia,Portugal,2019,2
+565,Russia,Puerto Rico,2020,1
+566,Russia,Russia,2018,1
+567,Russia,Russia,2020,1
+568,Russia,Slovakia,2016,1
+569,Russia,Spain,2018,1
+570,Russia,Sweden,2018,1
+571,Russia,Switzerland,2016,1
+572,Russia,Switzerland,2019,1
+573,Russia,United Arab Emirates,2019,1
+574,Russia,United Kingdom,2016,1
+575,Russia,United Kingdom,2017,3
+576,Russia,United Kingdom,2018,2
+577,Russia,United Kingdom,2019,1
+578,Russia,United Kingdom,2020,2
+579,Russia,United States,2016,11
+580,Russia,United States,2017,12
+581,Russia,United States,2018,13
+582,Russia,United States,2019,7
+583,Russia,United States,2020,10
+584,Saint Kitts and Nevis,Hong Kong,2019,1
+585,Saint Kitts and Nevis,United States,2017,1
+586,Serbia,Australia,2019,1
+587,Serbia,Belarus,2019,1
+588,Serbia,Canada,2020,1
+589,Serbia,Czech Republic,2020,1
+590,Serbia,France,2016,1
+591,Serbia,Greece,2020,1
+592,Serbia,Hungary,2017,1
+593,Serbia,India,2019,1
+594,Serbia,Italy,2020,1
+595,Serbia,New Zealand,2017,1
+596,Serbia,Sweden,2017,1
+597,Serbia,United Kingdom,2016,1
+598,Serbia,United Kingdom,2017,1
+599,Serbia,United Kingdom,2018,1
+600,Serbia,United Kingdom,2020,1
+601,Serbia,United States,2016,1
+602,Serbia,United States,2017,4
+603,Serbia,United States,2018,3
+604,Serbia,United States,2020,5
+605,Singapore,Singapore,2016,1
+606,Singapore,Singapore,2017,1
+607,Singapore,United States,2016,1
+608,Singapore,United States,2017,1
+609,Slovakia,Canada,2019,1
+610,Slovakia,Ireland,2017,1
+611,Slovakia,United Kingdom,2018,1
+612,Slovakia,United States,2019,1
+613,Slovenia,Austria,2017,1
+614,Slovenia,Slovenia,2017,1
+615,Slovenia,Spain,2018,1
+616,Slovenia,United Kingdom,2017,1
+617,Slovenia,United States,2016,1
+618,Slovenia,United States,2019,2
+619,South Africa,Germany,2016,1
+620,South Africa,Netherlands,2017,1
+621,South Africa,United Kingdom,2019,1
+622,South Africa,United States,2018,1
+623,South Africa,United States,2020,2
+624,South Korea,New Zealand,2019,1
+625,South Korea,South Korea,2016,1
+626,Spain,Australia,2020,1
+627,Spain,France,2019,1
+628,Spain,India,2020,1
+629,Spain,Italy,2020,1
+630,Spain,Japan,2019,1
+631,Spain,Mexico,2019,1
+632,Spain,New Zealand,2016,1
+633,Spain,Romania,2020,1
+634,Spain,Singapore,2019,1
+635,Spain,Singapore,2020,2
+636,Spain,Spain,2016,1
+637,Spain,Spain,2020,1
+638,Spain,United Kingdom,2018,3
+639,Spain,United Kingdom,2020,1
+640,Spain,United States,2018,2
+641,Spain,United States,2019,1
+642,Spain,United States,2020,2
+643,Sri Lanka,Germany,2016,1
+644,Sri Lanka,Germany,2017,1
+645,Sri Lanka,Slovenia,2020,1
+646,Sri Lanka,United States,2018,1
+647,Sweden,France,2018,1
+648,Sweden,United States,2016,1
+649,Sweden,United States,2020,1
+650,Switzerland,Canada,2017,1
+651,Switzerland,Hong Kong,2019,1
+652,Switzerland,United States,2017,1
+653,Switzerland,United States,2018,2
+654,Tajikistan,South Korea,2020,1
+655,Thailand,Canada,2019,1
+656,Thailand,France,2018,1
+657,Thailand,Israel,2017,1
+658,Thailand,Russia,2019,1
+659,Thailand,United Kingdom,2020,1
+660,Thailand,United States,2016,1
+661,Thailand,United States,2017,2
+662,Thailand,United States,2020,3
+663,Tunisia,Canada,2019,1
+664,Tunisia,Switzerland,2019,1
+665,Tunisia,United Kingdom,2020,1
+666,Tunisia,United States,2016,1
+667,Turkey,Australia,2017,1
+668,Turkey,France,2020,1
+669,Turkey,Israel,2016,1
+670,Turkey,Nigeria,2020,1
+671,Turkey,Russia,2017,1
+672,Turkey,Russia,2019,1
+673,Turkey,Singapore,2020,1
+674,Turkey,United Kingdom,2019,1
+675,Turkey,United States,2018,1
+676,Turkey,United States,2019,1
+677,Turkey,United States,2020,2
+678,Turkmenistan,United Kingdom,2020,1
+679,Ukraine,Armenia,2018,1
+680,Ukraine,Australia,2016,2
+681,Ukraine,Australia,2017,3
+682,Ukraine,Australia,2018,2
+683,Ukraine,Australia,2019,2
+684,Ukraine,Australia,2020,1
+685,Ukraine,Belarus,2020,1
+686,Ukraine,Belgium,2017,1
+687,Ukraine,Belgium,2018,2
+688,Ukraine,Canada,2016,1
+689,Ukraine,Canada,2017,3
+690,Ukraine,Canada,2019,1
+691,Ukraine,Canada,2020,3
+692,Ukraine,China,2018,1
+693,Ukraine,Cyprus,2019,1
+694,Ukraine,Denmark,2018,2
+695,Ukraine,Estonia,2019,1
+696,Ukraine,Estonia,2020,2
+697,Ukraine,France,2020,2
+698,Ukraine,Germany,2017,2
+699,Ukraine,Germany,2019,2
+700,Ukraine,Germany,2020,3
+701,Ukraine,Greece,2017,1
+702,Ukraine,Hong Kong,2016,1
+703,Ukraine,Hong Kong,2017,1
+704,Ukraine,Hong Kong,2018,1
+705,Ukraine,Hong Kong,2019,1
+706,Ukraine,India,2016,2
+707,Ukraine,India,2018,1
+708,Ukraine,India,2020,1
+709,Ukraine,Ireland,2017,2
+710,Ukraine,Ireland,2018,1
+711,Ukraine,Ireland,2019,1
+712,Ukraine,Ireland,2020,1
+713,Ukraine,Israel,2017,2
+714,Ukraine,Israel,2018,2
+715,Ukraine,Israel,2019,2
+716,Ukraine,Israel,2020,1
+717,Ukraine,Malta,2017,1
+718,Ukraine,Netherlands,2020,3
+719,Ukraine,Pakistan,2020,1
+720,Ukraine,Poland,2016,1
+721,Ukraine,Poland,2020,1
+722,Ukraine,Russia,2019,2
+723,Ukraine,Russia,2020,4
+724,Ukraine,Singapore,2017,1
+725,Ukraine,Singapore,2018,1
+726,Ukraine,Singapore,2020,1
+727,Ukraine,Spain,2016,1
+728,Ukraine,Spain,2019,2
+729,Ukraine,Spain,2020,1
+730,Ukraine,Sweden,2018,1
+731,Ukraine,Switzerland,2017,1
+732,Ukraine,Switzerland,2018,1
+733,Ukraine,Switzerland,2020,1
+734,Ukraine,Ukraine,2018,2
+735,Ukraine,Ukraine,2020,2
+736,Ukraine,United Arab Emirates,2017,1
+737,Ukraine,United Arab Emirates,2020,1
+738,Ukraine,United Kingdom,2017,1
+739,Ukraine,United Kingdom,2018,5
+740,Ukraine,United Kingdom,2019,2
+741,Ukraine,United Kingdom,2020,5
+742,Ukraine,United States,2016,16
+743,Ukraine,United States,2017,17
+744,Ukraine,United States,2018,17
+745,Ukraine,United States,2019,14
+746,Ukraine,United States,2020,16
+747,United Arab Emirates,Australia,2020,1
+748,United Arab Emirates,Austria,2018,1
+749,United Arab Emirates,Malaysia,2020,1
+750,United Arab Emirates,Singapore,2020,1
+751,United Arab Emirates,Sweden,2019,1
+752,United Arab Emirates,United Kingdom,2018,1
+753,United Arab Emirates,United States,2016,1
+754,United Arab Emirates,United States,2017,3
+755,United Arab Emirates,United States,2020,1
+756,United Kingdom,Australia,2020,3
+757,United Kingdom,Belgium,2020,2
+758,United Kingdom,Brazil,2020,1
+759,United Kingdom,Canada,2018,1
+760,United Kingdom,Denmark,2019,1
+761,United Kingdom,Finland,2020,1
+762,United Kingdom,France,2020,1
+763,United Kingdom,Germany,2020,1
+764,United Kingdom,India,2020,1
+765,United Kingdom,Israel,2020,1
+766,United Kingdom,Kuwait,2020,1
+767,United Kingdom,Nigeria,2020,1
+768,United Kingdom,Qatar,2020,1
+769,United Kingdom,Sweden,2018,1
+770,United Kingdom,Switzerland,2020,1
+771,United Kingdom,United Kingdom,2016,3
+772,United Kingdom,United Kingdom,2018,2
+773,United Kingdom,United Kingdom,2020,5
+774,United Kingdom,United States,2016,2
+775,United Kingdom,United States,2017,3
+776,United Kingdom,United States,2018,3
+777,United Kingdom,United States,2019,2
+778,United Kingdom,United States,2020,5
+779,United States,Australia,2016,3
+780,United States,Australia,2018,1
+781,United States,Australia,2019,1
+782,United States,Australia,2020,2
+783,United States,Canada,2018,2
+784,United States,Canada,2019,2
+785,United States,Canada,2020,3
+786,United States,China,2019,1
+787,United States,Denmark,2017,1
+788,United States,France,2018,1
+789,United States,Germany,2016,1
+790,United States,Germany,2017,2
+791,United States,Germany,2020,1
+792,United States,Hong Kong,2017,1
+793,United States,Hong Kong,2019,1
+794,United States,India,2017,1
+795,United States,India,2020,1
+796,United States,Israel,2016,1
+797,United States,Israel,2017,1
+798,United States,Kuwait,2020,1
+799,United States,Malaysia,2018,1
+800,United States,New Zealand,2018,1
+801,United States,Oman,2016,1
+802,United States,Pakistan,2020,1
+803,United States,Russia,2019,1
+804,United States,Russia,2020,1
+805,United States,Singapore,2020,1
+806,United States,Switzerland,2019,1
+807,United States,United Kingdom,2016,1
+808,United States,United Kingdom,2017,1
+809,United States,United Kingdom,2018,1
+810,United States,United Kingdom,2020,2
+811,United States,United States,2016,15
+812,United States,United States,2017,23
+813,United States,United States,2018,13
+814,United States,United States,2019,22
+815,United States,United States,2020,32
+816,Uruguay,Canada,2020,1
+817,Uruguay,United Kingdom,2018,1
+818,Uruguay,United States,2018,1
+819,Venezuela,Canada,2020,1
+820,Venezuela,Germany,2016,1
+821,Venezuela,Liechtenstein,2019,1
+822,Venezuela,Peru,2020,1
+823,Venezuela,Singapore,2017,1
+824,Venezuela,United States,2019,2
+825,Venezuela,United States,2020,1
+826,Vietnam,Australia,2020,1
+827,Vietnam,China,2019,1
+828,Vietnam,Japan,2018,1
+829,Vietnam,South Korea,2020,1
+830,Vietnam,United Kingdom,2020,1
+831,Vietnam,United States,2017,8
+832,Vietnam,United States,2019,1
+833,Vietnam,United States,2020,1

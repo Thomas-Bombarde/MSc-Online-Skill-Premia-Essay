@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="612c239d-8569-428a-b648-67ef4d30f0c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.Rhistory" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rhistory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/pcs/windowlayoutstate.pper" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/pcs/windowlayoutstate.pper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/prop/4DAD64C6" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/prop/4DAD64C6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/prop/845E2EE6" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/prop/845E2EE6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/prop/INDEX" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/prop/INDEX" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/03A264CC-contents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/21166BB9-contents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/2BB22C19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/2BB22C19-contents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/476A91C9-contents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/6C21CC13-contents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/82D78FB5-contents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/C6F4493E" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/C6F4493E-contents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/DD18C8F0-contents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/2D3F9F2C/sources/session-6394f5eb/lock_file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/shared/notebooks/86AB5871-data_wrangle/1/2D3F9F2Cf3903481/chunks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/shared/notebooks/C4E8ADE6-Rcode/1/2D3F9F2C6394f5eb/chunks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/shared/notebooks/C4E8ADE6-Rcode/1/2D3F9F2Cf3903481/chunks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/shared/notebooks/C4E8ADE6-Rcode/1/s/chunks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/shared/notebooks/C4E8ADE6-Rcode/1/s/csetup_chunk/00000f.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.Rproj.user/shared/notebooks/paths" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rproj.user/shared/notebooks/paths" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OLM_Data.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Oxford SNAI.Rproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rcode.Rmd" beforeDir="false" afterPath="$PROJECT_DIR$/../Rcode.Rmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Replication .ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SNAI_data_analysis.Rmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SNAI_data_wrangle.Rmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Summative/.Rproj.user/2D3F9F2C/pcs/files-pane.pper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Summative/.Rproj.user/2D3F9F2C/pcs/source-pane.pper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Summative/.Rproj.user/2D3F9F2C/pcs/windowlayoutstate.pper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Summative/.Rproj.user/2D3F9F2C/pcs/workbench-pane.pper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Summative/.Rproj.user/2D3F9F2C/rmd-outputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Summative/.Rproj.user/2D3F9F2C/saved_source_markers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adjacency_matrix.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edge_list.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../output/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output/edge_tablegraph.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output/skill_premiums_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../output/skill_premiums_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output/skills.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../output/skills.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prjt_skills_list.csv" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2mHRsVlNC56CupIrCU6e1KWlyZq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="612c239d-8569-428a-b648-67ef4d30f0c1" name="Changes" comment="" />
+      <created>1726731721680</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726731721680</updated>
+    </task>
+    <servers />
+  </component>
+</project>

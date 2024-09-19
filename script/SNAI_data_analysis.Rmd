@@ -1,0 +1,178 @@
+---
+title: "SNAI Summative: data analysis"
+author: ""
+date: "2024-04-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ineq)
+library(dplyr)
+library(stringr)
+library(igraph)
+library(lmtest)
+library(readr)
+library(plm)
+library(tidyverse)
+library(stargazer)
+library(lmtest)
+# Set the working directory
+setwd("/Users/tombombo/Library/Mobile Documents/com~apple~CloudDocs/Oxford SNAI")
+```
+
+```{r}
+skill_premium <- read_csv("output/skill_premiums_data.csv")
+```
+
+```{r regress}
+model <- lm( log(skill_premium_countryfes) ~ supply + demand + log(degree_nc) + annvalue_nc + I(1/gini_nc), data=skill_premium)
+summary(model)
+# get heteroskedastic-robust standard errors
+summary_with_robust_se <- coeftest(model, vcov. = vcovHC(model, type = "HC1"))
+stargazer(model, summary_with_robust_se, type = "text")
+plot(model)
+```
+```{r plot relationship}
+ggplot(skill_premium) + geom_point(aes(x = log(supply+1), y = skill_premium_countryfes)) + theme_bw() + labs(x = "Supply", y = "Demand", color = "Skill premium") + geom_smooth(aes(x = log(supply+1), y = skill_premium_countryfes), formula = y ~ poly(x, 2))
+```
+
+```{r regress}
+```
+
+```{r regress}
+```
+
+It is very strange that the relationship appears supply and demand is inverted on this data. This could be due to high variability in skill-premia of low-demanded and low-supplied skills, since these are very rare. Taking the log() would give greater weight to these highly variable, and potentially noiser, observations. I investigate an alternative specification taking supply and demand without transformation. 
+
+```{r regress}
+model <- lm(log(skill_premium_countryfes) ~ supply + demand + log(degree_nc) + annvalue_nc + I(1/gini_nc), data = skill_premiums)
+summary(model)
+# get heteroskedastic-robust standard errors
+summary_with_robust_se <- coeftest(model, vcov. = vcovHC(model, type = "HC1"))
+stargazer(model, summary_with_robust_se, type = "text")
+plot(model)
+```
+
+I repeat the same two exercices for the disparity-filter model.
+```{r regress}
+model <- lm(log(skill_premium_countryfes) ~ log(supply+1) + log(demand+1) + log(degree_df) + annvalue_df + I(1/gini_df), data = skill_premiums)
+summary(model)
+# get heteroskedastic-robust standard errors
+summary_with_robust_se <- coeftest(model, vcov. = vcovHC(model, type = "HC1"))
+stargazer(model, summary_with_robust_se, type = "text")
+```
+
+```{r regress}
+model <- lm(log(skill_premium_countryfes) ~ supply + demand + log(degree_df) + annvalue_df + I(1/gini_df), data = skill_premiums)
+summary(model)
+# get heteroskedastic-robust standard errors
+summary_with_robust_se <- coeftest(model, vcov. = vcovHC(model, type = "HC1"))
+stargazer(model, summary_with_robust_se, type = "text")
+```
+
+# Investigate Extension
+
+```{r regress}
+model <- lm( log(skill_premium_countryfes) ~ log(supply+1) + log(demand+1) + log(degree_nc) + annvalue_nc + I(1/gini_nc) + bridge_centrality_nc, data=skill_premium)
+summary(model)
+# get heteroskedastic-robust standard errors
+summary_with_robust_se <- coeftest(model, vcov. = vcovHC(model, type = "HC1"))
+stargazer(model, summary_with_robust_se, type = "text")
+```
+
+
+```{r regress with bridge}
+model <- lm(skill_premium_niavereg ~ log(supply+1) + bridge_centrality + log(demand+1) + log(degree) + annvalue + Gini, data = skill_premiums)
+summary(model)
+# get heteroskedastic-robust standard errors
+summary_with_robust_se <- coeftest(model, vcov. = vcovHC(model, type = "HC1"))
+stargazer(model, summary_with_robust_se, type = "text")
+data %>% select(employer_country) %>% unique()
+```
+
+```{r regress}
+model <- lm(skill_premium_controls ~ log(supply+1) + log(demand+1) + log(degree) + annvalue + Gini, data = skill_premiums)
+summary(model)
+# get heteroskedastic-robust standard errors
+summary_with_robust_se <- coeftest(model, vcov. = vcovHC(model, type = "HC1"))
+stargazer(model, summary_with_robust_se, type = "text")
+```
+
+# Descriptives
+
+
+```{r plot the distribution of all skill premium in skill_premiums_joined.csv with colour by type}
+skill_premiums <- read_csv("output/skill_premiums_joined.csv") %>% select(-skill_premium_workerfes)
+skill_premiums_long <- pivot_longer(skill_premiums, cols = c(skill_premium_niavereg, skill_premium_countryfes, skill_premium_controls), names_to = "type", values_to = "skill_premium")
+plot_estimated_premiums_distribution <- ggplot(na.omit(skill_premiums_long)) + geom_density(aes(x = skill_premium, fill = type), alpha = 0.3) + theme_bw() + labs(x = "Skill premium", y = "Density") + scale_fill_discrete(name = "Type") +
+  scale_x_continuous(limits = c(-2, 2)) + 
+  scale_fill_discrete(name = "Type", labels = c("Controls", "Controls & Country FEs", "Naive")) + 
+   theme(legend.position = c(0.2, 0.8), 
+         legend.text = element_text(size = 12, family = "serif"),
+         legend.title = element_text(size = 12, family = "serif"),
+         axis.title.x = element_text(size = 12, family = "serif"),
+         axis.title.y = element_text(size = 12, family = "serif"))
+ggsave("output/plots/estimated_premiums_distribution.png", plot = plot_estimated_premiums_distribution, width = 6, height = 4)
+```
+
+```{r plot the distribution of all skill premium in skill_premiums_joined.csv with colour by type}
+
+```
+```{r plot the distribution of naive skill premiums}
+skill_premiums <- read_csv("output/skill_premiums_niavereg.csv")
+ggplot(skill_premiums) + geom_density(aes(x = skill_premium), fill = "blue", alpha = 0.5) + theme_bw() + labs(x = "Skill premium", y = "Density")
+```
+
+
+
+```{r plot the distribution of skill premiums with worker/employer_country fes}
+```
+
+```{r plot the distribution of skill premiums}
+```
+```{r are there enough projects per worker to have worker fes?}
+# plot the log density of number of projects a worker has worked on
+data %>% group_by(worker_ID) %>% summarise(number_of_projects = n()) %>% ggplot() + geom_histogram(aes(x = number_of_projects), bins = 100) + theme_bw() + labs(x = "Number of projects", y = "Number of workers")
+```
+
+```{r are there enough workers to have worker fes?}
+# count the number of workers
+data %>% summarise(num_workers = n_distinct(worker_ID))
+```
+
+```{r plot the distribution of jobs across countries}
+data %>% group_by(worker_country) %>% summarise(number_of_postings = n()) %>% ggplot() + geom_bar(aes(x = worker_country, y = number_of_postings), stat = "identity") + theme_bw() + labs(x = "Country", y = "Number of postings")
+# create variable by geographical area
+```
+
+```{r plot the distribution of jobs across categories}
+```
+```{r plot premiums across categories}
+data <- data %>% mutate("year_month" = round_date (date_published, "month"))
+ggplot(data) + geom_density(aes(x = log(hourly_rate), fill = category_main), alpha = 0.5) + theme_bw() + labs(x = "Hourly rate", y = "Density") + scale_fill_discrete(name = "Category")
+```
+```{r plot premiums across countries and time}
+# plot mean wage across categories across years
+data_GN <- data %>% filter(worker_country %in% c("United States", "United Kingdom", "Germany", "France", "Canada", "Australia", "Japan", "Netherlands", "Sweden", "Switzerland", "Norway", "Denmark", "Finland", "Belgium", "Austria", "Ireland", "Singapore", "Hong Kong", "New Zealand"))
+data_EU <- data %>% filter(worker_country %in% c("United Kingdom", "Germany", "France", "Netherlands", "Sweden", "Switzerland", "Norway", "Denmark", "Finland", "Belgium", "Austria", "Ireland"))
+
+# plot mean wage across countries across years
+data_EU %>% group_by(worker_country, year_month) %>% summarise(mean_hourly_rate = mean(hourly_rate)) %>% ggplot() + geom_line(aes(x = year_month, y = mean_hourly_rate, color = worker_country)) + theme_bw() + labs(x = "Year", y = "Mean hourly rate") + scale_color_discrete(name = "Country")
+
+data_GN %>% group_by(category_main, year_month) %>% summarise(mean_hourly_rate = mean(hourly_rate, na.rm = TRUE)) %>% ggplot() + geom_line(aes(x = year_month, y = mean_hourly_rate, color = category_main)) + theme_bw() + labs(x = "Year", y = "Mean hourly rate") + scale_color_discrete(name = "Category")
+
+data_GN%>% group_by(category_main, year_month) %>% summarise(number_of_postings = n()) %>% ggplot() + geom_line(aes(x = year_month, y = number_of_postings, color = category_main)) + theme_bw() + labs(x = "Year", y = "Number of postings") + scale_color_discrete(name = "Category")
+```
+
+```{r plot premiums across countries and categoires, warning = FALSE}
+ggplot(data_EU) + geom_density(aes(x = log(hourly_rate), fill = worker_country), alpha = 0.5) + theme_bw() + labs(x = "Hourly rate", y = "Density") + scale_fill_discrete(name = "Country") + facet_wrap(~category_main)
+```
+
+
+```{r plot premiums}
+```
+
+```{r plot premiums}
+```
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
